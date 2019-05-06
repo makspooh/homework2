@@ -10,31 +10,31 @@ function Car(name, year, distance, color) {
 }
 
 Car.prototype.enable = function() {
-    if(this._gasAmount) {
+    if (this._gasAmount) {
         this._enabled = true;
     } else console.log('Нужно заправить автомобиль');
-}
+};
 
 Car.prototype.start = function() {
-    if(this._enabled) {
+    if (this._enabled) {
         console.log('Машина марки ' + this._name + ' поехала!');
         this._run = true;
     } else console.log('Сначала включите зажигание!');
-}
+};
 
 Car.prototype.stop = function() {
-    if(!this._enabled) {
+    if (!this._enabled) {
         console.log('Зажигание и так выключено!')
     } else {
         this._run = false;
         this._enabled = false;
         console.log('Машина остановилась')
     }
-}
+};
 
 Car.prototype.fillCar = function(value) {
     this._gasAmount += value;
-}
+};
 
 let ford = new Car('Ford', 2018, 1000, 'Red');
 let ford2 = new Car('Ford2', 2018, 1000, 'Red');
@@ -71,15 +71,15 @@ function City(name, population, country) {
 
 City.prototype.getPopulation = function() {
     return this._population;
-}
+};
 
 City.prototype.getCityName = function() {
     return this._name;
-}
+};
 
 City.prototype.addCitizen = function() {
     return this._population += 1;
-}
+};
 
 let kremen = new City('Kremenchug', 200000, 'Ukraine')
 
